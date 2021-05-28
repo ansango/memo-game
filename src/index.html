@@ -8,23 +8,149 @@
             href="https://fonts.googleapis.com/css?family=Press+Start+2P"
             rel="stylesheet"
         />
-        <title>Document</title>
+        <title>everPairs</title>
     </head>
-    <body>
-        <div class="h-screen w-screen">
-            <div class="p-2 md:p-8">
-                <h1 class="nes-text">Pairs</h1>
-                <h3>Score:<span id="result"></span></h3>
+    <body class="bg-ever">
+        <div class="nes-container max-w-4xl mx-auto bg-white">
+            <h3 class="title">Jira</h3>
+            <div class="item">
+                <div class="nes-table-responsive">
+                    <table class="nes-table is-bordered is-centered">
+                        <thead>
+                            <tr>
+                                <th>Abierta</th>
+                                <th>Desarrollo</th>
+                                <th>Negocio</th>
+                                <th>Entregado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WP-567 - Etiquetado variables</td>
+                                <td>WP-2804 - Formulario Contratacion</td>
+                                <td>WP-2703- Tablas de precios</td>
+                                <td>WP-532 Migracion WAS9</td>
+                            </tr>
+                            <tr>
+                                <td>WP-5034 - No funciona en IE</td>
+                                <td>WP-2903 - Corrección deduda técnica</td>
+                                <td>
+                                    WP-2956 - Landing Campaña Smart Hidrógeno
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    WP-2956 - Landing Campaña Smart Hidrógeno
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="p-2 md:p-10 flex flex-col items-center justify-center">
-                <div class="grid grid-cols-3 gap-4"></div>
+        </div>
+        <div class="sprint">
+            <div class="nes-container max-w-4xl mx-auto bg-white my-10">
+                <div class="flex justify-end">
+                    <section class="icon-list">
+                        <!-- heart -->
+                        <i class="nes-icon is-medium heart"></i>
+                        <i class="nes-icon is-medium is-half heart"></i>
+                        <i class="nes-icon is-medium is-transparent heart"></i>
+                        <i class="nes-icon is-medium heart is-empty"></i>
+                    </section>
+                </div>
+                <div class="mb-5">
+                    <div class="flex justify-between">
+                        <h3>Sprint 1 MAC SIMPLIFICADA</h3>
+                        <p>Entrega: próximo jueves</p>
+                    </div>
+                    <progress
+                        class="nes-progress is-primary"
+                        value="90"
+                        max="100"
+                    ></progress>
+                </div>
+                <div class="mb-5">
+                    <div class="flex justify-between">
+                        <h3>Sprint 2 MAC SIMPLIFICADA</h3>
+                        <p>Entrega: próxima semana</p>
+                    </div>
+                    <progress
+                        class="nes-progress is-success"
+                        value="30"
+                        max="100"
+                    ></progress>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-xl mx-auto my-96">
+            <div class="nes-container is-dark with-title">
+                <p class="title">Info</p>
+                <p>
+                    Estamos actualizando tu equipo, mientras acaba todo el
+                    proceso, échate una Ever partida.
+                </p>
+                <p>Si puedes...</p>
+            </div>
+        </div>
+        <div class="max-w-4xl bg-white mx-auto">
+            <div class="nes-container">
+                <div class="flex justify-between items-center">
+                    <h4 class="nes-text">EVER-PAIRS GAME</h4>
+                    <i class="nes-icon is-medium star"></i>
+                </div>
+                <h4>everScore:<span id="result"></span></h4>
             </div>
         </div>
 
+        <div
+            class="
+                px-2
+                py-8
+                mb-52
+                md:py-14
+                flex flex-col
+                items-center
+                justify-center
+            "
+        >
+            <div class="grid grid-cols-3 lg:grid-cols-6 gap-4"></div>
+        </div>
         <input type="hidden" value="PLAY" onclick="play()" />
         <audio id="coin" src="sound/coin.mp3"></audio>
         <audio id="error" src="sound/error.mp3"></audio>
         <audio id="win" src="sound/win.mp3"></audio>
+        <section>
+            <dialog class="nes-dialog is-dark is-rounded" id="dialog-vpn">
+                <form method="dialog">
+                    <p class="title">Daily</p>
+                    <p>Pedro Javier ha iniciado Daily 3 Internacional</p>
+                    <menu class="dialog-menu">
+                        <button class="nes-btn">Descartar</button>
+                        <button class="nes-btn is-primary">Unirte</button>
+                    </menu>
+                </form>
+            </dialog>
+        </section>
+        <section>
+            <dialog class="nes-dialog is-dark is-rounded" id="dialog-daily">
+                <form method="dialog">
+                    <p class="title">Aviso</p>
+                    <p>
+                        No has accedido en los últimos 2 minutos a la VPN de
+                        Everis
+                    </p>
+                    <menu class="dialog-menu">
+                        <button class="nes-btn">Cancelar</button>
+                        <button class="nes-btn is-primary">Posponer</button>
+                    </menu>
+                </form>
+            </dialog>
+        </section>
         <script src="main.js"></script>
     </body>
 </html>

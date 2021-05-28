@@ -1,67 +1,97 @@
 import styles from "./style.css";
 import "nes.css/css/nes.min.css";
-import white from "./img/white.png";
-import blank from "./img/blank.png";
-import fries from "./img/fries.png";
-import burger from "./img/cheeseburger.png";
-import ice from "./img/ice-cream.png";
-import pizza from "./img/pizza.png";
-import shake from "./img/milkshake.png";
-import dog from "./img/hotdog.png";
+
+import blank from "./img/everis.png";
+import anibal from "./img/anibal.png";
+import edu from "./img/edu.png";
+import miguel from "./img/miguel.png";
+import laura from "./img/laura.png";
+import manu from "./img/manu.png";
+import nuria from "./img/nuria.png";
+import pedro from "./img/pedro.png";
+import sacris from "./img/sacris.png";
+import sesi from "./img/sesi.png";
+import victor from "./img/victor.png";
 
 document.addEventListener("DOMContentLoaded", () => {
   const cardArray = [
     {
-      name: "fries",
-      img: fries,
+      name: "edu",
+      img: edu,
     },
     {
-      name: "cheeseburger",
-      img: burger,
+      name: "miguel",
+      img: miguel,
     },
     {
-      name: "ice-cream",
-      img: ice,
+      name: "laura",
+      img: laura,
     },
     {
-      name: "pizza",
-      img: pizza,
+      name: "manu",
+      img: manu,
     },
     {
-      name: "milkshake",
-      img: shake,
+      name: "nuria",
+      img: nuria,
     },
     {
-      name: "hotdog",
-      img: dog,
+      name: "pedro",
+      img: pedro,
     },
     {
-      name: "fries",
-      img: fries,
+      name: "sacris",
+      img: sacris,
     },
     {
-      name: "cheeseburger",
-      img: burger,
+      name: "sesi",
+      img: sesi,
     },
     {
-      name: "ice-cream",
-      img: ice,
+      name: "victor",
+      img: victor,
     },
     {
-      name: "pizza",
-      img: pizza,
+      name: "edu",
+      img: edu,
     },
     {
-      name: "milkshake",
-      img: shake,
+      name: "miguel",
+      img: miguel,
     },
     {
-      name: "hotdog",
-      img: dog,
+      name: "laura",
+      img: laura,
+    },
+    {
+      name: "manu",
+      img: manu,
+    },
+    {
+      name: "nuria",
+      img: nuria,
+    },
+    {
+      name: "pedro",
+      img: pedro,
+    },
+    {
+      name: "sacris",
+      img: sacris,
+    },
+    {
+      name: "sesi",
+      img: sesi,
+    },
+    {
+      name: "victor",
+      img: victor,
     },
   ].sort(() => 0.5 - Math.random());
   const grid = document.querySelector(".grid");
   const resultDisplay = document.querySelector("#result");
+  const modalVPN = document.getElementById("dialog-vpn");
+  const modalDaily = document.getElementById("dialog-daily");
   let cardsChosen = [];
   let cardsChosenId = [];
   let cardsWon = [];
@@ -121,12 +151,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     cardsChosen = [];
     cardsChosenId = [];
-    resultDisplay.textContent = cardsWon.length;
+    resultDisplay.textContent = cardsWon.length * 100;
     if (cardsWon.length === cardArray.length / 2) {
-      resultDisplay.textContent = "Congratulations! You found them all!";
+      resultDisplay.textContent = "Enhorabuena mañana te toca traer empanadas!";
       playSound("win");
     }
   }
+
+  setTimeout(() => {
+    modalVPN.showModal();
+  }, 5000);
+
+  setInterval(() => {
+    modalDaily.showModal();
+  }, 10000);
 
   createBoard();
 });
